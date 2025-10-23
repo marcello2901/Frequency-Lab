@@ -442,7 +442,7 @@ if uploaded_file:
     if st.session_state.df is None or uploaded_file.name != st.session_state.get('file_name'):
         with st.spinner("Carregando dados..."):
             df = load_data(uploaded_file)
-            if df is not in (None, False) and not df.empty:
+            if df is not None and not df.empty:
                 st.session_state.df = df
                 st.session_state.file_name = uploaded_file.name
                 st.sidebar.success(f"Arquivo '{uploaded_file.name}' carregado!")
