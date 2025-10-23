@@ -62,7 +62,7 @@ def get_gemini_query(api_key, user_prompt, columns):
         
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-pro')
+        model = genai.GenerativeModel('gemini-1.5-flash')
         
         # Prompt de sistema detalhado para instruir a IA
         system_prompt = f"""
